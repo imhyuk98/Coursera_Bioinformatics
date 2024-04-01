@@ -33,3 +33,12 @@ ori  영역에는 셀이 여기에서 복제를 시작하도록 명령하는 "�
 
 5. We output the k-consecutive set(s) that is most frequent
 
+The 3-mers appearing 25 times is not too surprising. Smaller the mer, greater the chances of it occurring.
+
+The 6-mer appearing 8 times is def surprising tho. It's a fairly large mer but still appears 8 times.
+
+STOP and Think: Look again at the four most frequent 9-mers in the ori region of Vibrio cholerae. Now do you notice anything surprising?
+
+"ATGATCAAG",   "CTTGATCAT",   "TCTTGATCA",   "CTCTTGATC"
+
+With the exception of the three occurrences of "ATGATCAAG" in ori at starting positions 151913, 152013, and 152394, no other instances of "ATGATCAAG" form “clumps”, i.e., appear close to each other in a small region of the genome.
