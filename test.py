@@ -1,24 +1,19 @@
-# Copy your PatternCount function below here
-def PatternCount(Text, Pattern):
-    count = 0
-    for i in range(len(Text)-len(Pattern)+1):
-        if Text[i:i+len(Pattern)] == Pattern:
-            count = count+1
+# Input:  Two strings p and q
+# Output: An integer value representing the Hamming Distance between p and q.
+def HammingDistance(p, q):
+    # your code here
+    distance=0
+    if len(p) != len(q):
+        raise ValueError("Input strings must have the same length")
 
-    return count 
+    # Iterate through the characters of both strings and compare them
+    for i in range(len(p)):
+        if p[i] != q[i]:
+            distance += 1
+    return distance
 
-# On the following line, let's create a variable called Text that is equal to the oriC region from T petrophila
-Text = "AACTCTATACCTCCTTTTTGTCGAATTTGTGTGATTTATAGAGAAAATCTTATTAACTGAAACTAAAATGGTAGGTTTGGTGGTAGGTTTTGTGTACATTTTGTAGTATCTGATTTTTAATTACATACCGTATATTGTATTAAATTGACGAACAATTGCATGGAATTGAATATATGCAAAACAAACCTACCACCAAACTCTGTATTGACCATTTTAGGACAACTTCAGGGTGGTAGGTTTCTGAAGCTCTCATCAATAGACTATTTTAGTCTTTACAAACAATATTACCGTTCAGATTCAAGATTCTACAACGCTGTTTTAATGGGCGTTGCAGAAAACTTACCACCTAAAATCCAGTATCCAAGCCGATTTCAGAGAAACCTACCACTTACCTACCACTTACCTACCACCCGGGTGGTAAGTTGCAGACATTATTAAAAACCTCATCAGAAGCTTGTTCAAAAATTTCAATACTCGAAACCTACCACCTGCGTCCCCTATTATTTACTACTACTAATAATAGCAGTATAATTGATCTGA"
+p = "CTACAGCAATACGATCATATGCGGATCCGCAGTGGCCGGTAGACACACGT"
+q = "CTACCCCGCTGCTCAATGACCGGACGGACGAAGAGCGAAGATATGGTGTG"
 
-
-# On the following line, create a variable called count_1 that is equal to the number of times
-# that "ATGATCAAG" occurs in Text.
-count_1 = 0
-
-# On the following line, create a variable called count_2 that is equal to the number of times
-# that "CTTGATCAT" occurs in Text. 
-count_2 = 0
-
-
-# Finally, print the sum of count_1 and count_2
-print(count_1 + count_2)
+result = HammingDistance(p, q)
+print(result)
